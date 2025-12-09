@@ -5,12 +5,25 @@ interface Env {
 }
 
 export const onRequest: PagesFunction<Env> = async (context) => {
-    const url = new URL(context.request.url);
-    // Strip '/api' from the pathname to forward to the worker root
-    const newPath = url.pathname.replace(/^\/api/, '');
+    try {
+        const url = new URL(context.request.url);
+        // Strip '/api' from the pathname to forward to the worker root
+        // Ensure we preserve the query string
+        url.pathname = url.pathname.replace(/^\/api/, '');
 
-    // Reconstruct the request to the backend
-    const newRequest = new Request(newPath + url.search, context.request);
+        // Construct a valid full URL (Origin + New Path)
+        // Passing a path-only string to 'new Request' can fail in some environments
+        const newRequest = new Request(url.toString(), context.request);
 
-    return context.env.BACKEND.fetch(newRequest);
+        return await context.env.BACKEND.fetch(newRequest);
+    } catch (err) {
+        return new Response(JSON.stringify({
+            error: 'Pages Function Error',
+            message: err instanceof Error ? err.message : String(err),
+            stack: err instanceof Error ? err.stack : undefined
+        }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
+    }
 };
