@@ -1,0 +1,11 @@
+{
+  "name": "table-frontend",
+  "compatibility_date": "2025-03-17",
+  "pages_build_output_dir": "./dist",
+  "services": [
+    {
+      "binding": "TABLE_BACKEND",
+      "service": "table-backend"
+    }
+  ]
+}

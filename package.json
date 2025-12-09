@@ -1,0 +1,12 @@
+{
+  "name": "cloudflare-template-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "dev:backend": "npm run dev --workspace @template/backend",
+    "dev:frontend": "npm run dev --workspace @template/frontend"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
