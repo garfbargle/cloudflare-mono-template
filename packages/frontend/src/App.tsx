@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { HelloResponse } from '@template/shared';
+import type { HelloResponse } from '@cloudflare-mono-template/shared';
 
 function App() {
   const [data, setData] = useState<HelloResponse | null>(null);
@@ -64,7 +64,7 @@ function App() {
         )}
 
         <p className="text-center text-neutral-500 mt-8 text-sm">
-          Frontend @template/frontend
+          Frontend @cloudflare-mono-template/frontend
         </p>
       </div>
     </div>

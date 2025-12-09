@@ -26,11 +26,11 @@ trap handle_signal INT TERM
 trap cleanup EXIT
 
 printf '\n› Starting backend (Wrangler dev)\n'
-npm run dev --workspace @template/backend &
+npm run dev --workspace @cloudflare-mono-template/backend &
 backend_pid=$!
 
 printf '\n› Starting frontend (Vite dev)\n'
-VITE_BACKEND_ORIGIN="${VITE_BACKEND_ORIGIN}" npm run dev --workspace @template/frontend &
+VITE_BACKEND_ORIGIN="${VITE_BACKEND_ORIGIN}" npm run dev --workspace @cloudflare-mono-template/frontend &
 frontend_pid=$!
 
 pids=("$backend_pid" "$frontend_pid")

@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "bash scripts/dev.sh",
-    "dev:backend": "npm run dev --workspace @template/backend",
-    "dev:frontend": "npm run dev --workspace @template/frontend"
+    "dev:backend": "npm run dev --workspace @cloudflare-mono-template/backend",
+    "dev:frontend": "npm run dev --workspace @cloudflare-mono-template/frontend"
   },
   "workspaces": [
     "packages/*"

@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
-import { API_VERSION, type HelloResponse } from '@template/shared';
+import { API_VERSION, type HelloResponse } from '@cloudflare-mono-template/shared';
 
 const app = new Hono<{ Bindings: CloudflareEnv }>();
 

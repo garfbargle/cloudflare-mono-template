@@ -32,11 +32,11 @@ Deploy the backend and frontend separately.
 ### Backend
 
 ```bash
-npm run deploy --workspace @template/backend
+npm run deploy --workspace @cloudflare-mono-template/backend
 ```
 
 ### Frontend
 
 ```bash
-npm run deploy --workspace @template/frontend
+npm run deploy --workspace @cloudflare-mono-template/frontend
 ```
