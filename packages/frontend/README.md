@@ -1,6 +1,6 @@
-## Table
+## cloudflare-mono-template-frontend
 
-React + Vite single-page app that powers the tabletop card simulator. The project deploys as a standalone Cloudflare Pages site with Functions for API proxying.
+React + Vite single-page app that powers the cloudflare-mono-template-frontend. The project deploys as a standalone Cloudflare Pages site with Functions for API proxying.
 
 ### Local Development
 
@@ -32,4 +32,3 @@ Use the package-local `wrangler.jsonc` to deploy through Cloudflare Pages:
 npm run deploy
 ```
 
-The configuration binds the private Worker service (`table-backend`) so that `/ws/*` requests are forwarded server-side without exposing the Durable Object publicly.

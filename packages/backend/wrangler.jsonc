@@ -1,5 +1,5 @@
 {
-  "name": "table-backend",
+  "name": "cloudflare-mono-template-backend",
   "main": "./src/index.ts",
   "compatibility_date": "2025-03-17"
 }
