@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { HelloResponse } from '@cloudflare-mono-template/shared';
+import { config } from './config';
 
 function App() {
   const [data, setData] = useState<HelloResponse | null>(null);
@@ -9,8 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const backendOrigin = import.meta.env.VITE_BACKEND_ORIGIN || 'http://localhost:8787';
-        const res = await fetch(`${backendOrigin}/`);
+        const res = await fetch(`${config.backendOrigin}/`);
         if (!res.ok) {
           throw new Error(`Failed to fetch: ${res.statusText}`);
         }

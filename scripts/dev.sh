@@ -30,7 +30,7 @@ npm run dev --workspace @cloudflare-mono-template/backend &
 backend_pid=$!
 
 printf '\n› Starting frontend (Vite dev)\n'
-VITE_BACKEND_ORIGIN="${VITE_BACKEND_ORIGIN}" npm run dev --workspace @cloudflare-mono-template/frontend &
+npm run dev --workspace @cloudflare-mono-template/frontend &
 frontend_pid=$!
 
 pids=("$backend_pid" "$frontend_pid")

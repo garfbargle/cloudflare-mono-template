@@ -2,5 +2,10 @@
   "name": "cloudflare-mono-template-frontend",
   "compatibility_date": "2025-03-17",
   "pages_build_output_dir": "./dist",
-  "services": []
+  "services": [
+    {
+      "binding": "BACKEND",
+      "service": "cloudflare-mono-template-backend"
+    }
+  ]
 }
