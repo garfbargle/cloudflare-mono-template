@@ -1,18 +1,24 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
-    "paths": {
-      "@shared/*": ["../shared/src/*"]
-    },
-    "types": ["@cloudflare/workers-types/2023-07-01"]
+    "types": [
+      "@cloudflare/workers-types/2023-07-01"
+    ]
   },
-  "include": ["src", "env.d.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src",
+    "env.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
